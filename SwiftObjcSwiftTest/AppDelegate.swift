@@ -6,6 +6,7 @@
 //
 
 import Cocoa
+import MyLibrary
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -15,6 +16,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		// Insert code here to initialize your application
+		
+		let consumer = ConsumerArray()
+		let string = consumer.simpleString
+		let array = consumer.arrayOfSwiftClass
+		
+		print("SimpleString: \(string)")
+		print("Array: \(array)")
+		
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {
