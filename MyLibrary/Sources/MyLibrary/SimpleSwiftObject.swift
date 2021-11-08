@@ -8,6 +8,13 @@
 import Cocoa
 
 @objc
-public class SimpleSwiftObject: NSObject {
+public protocol SimpleObject {
+	var differentProperty: String { get set }
+}
+
+@objc
+public class SimpleSwiftObject: NSObject, SimpleObject {
 	var simpleProperty: String = "hello"
+	
+	public var differentProperty: String = "diff"
 }

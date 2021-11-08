@@ -9,11 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class SimpleSwiftObject;
+@protocol SimpleObject;
 
 @interface ConsumerArray : NSObject
 @property (strong) NSString * simpleString;
-@property (strong) NSArray <SimpleSwiftObject*> * arrayOfSwiftClass;
+@property (strong) NSArray <SimpleObject> * arrayOfSwiftClass;
 @end
 
 NS_ASSUME_NONNULL_END
